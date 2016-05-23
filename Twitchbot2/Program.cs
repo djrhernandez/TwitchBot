@@ -8,6 +8,28 @@ namespace Twitchbot2
 {
     class Program
     {
+        /// <summary>
+        /// Code I found on whispers, look into it and see how it works and work on adding it
+        /// </summary>
+        /// <param name="args"></param>
+        //internal void Run()
+        //{
+            //TwitchChatConnection chatConnection = new TwitchChatConnection(IrcBot, false),
+               // whisperConnection = new TwitchChatConnection(bot, true);
+
+            //LinkedList<TwitchChannel> channels = new LinkedList<TwitchChannel>();
+            //channels.AddLast(new TwitchChannel(userBot));
+            ////As many channels as we want
+
+            //foreach (TwitchChannel channel in channels)
+            //{
+                //new TwitchChatRoom(chatConnection, whisperConnection, channel);
+            //}
+
+            //newThread(new ThreadStart(chatConnection.Run)).Start();
+            //whisperConnection.Run();
+        //}
+
         static void Main(string[] args)
         {
             IrcBot irc = new IrcBot("irc.twitch.tv", 6667,
@@ -20,8 +42,9 @@ namespace Twitchbot2
                 {
                     irc.sendChatMessage("Testing requested.");
                     ///TODO find out how to add who triggered the event and then add it to the end
-                    //Console.WriteLine("!test used by " + )
+                    ///Console.WriteLine("!test used by " + userName);
                 }
+
             }
         }
     }
