@@ -19,6 +19,8 @@ namespace Twitchbot2
                 if (message.Contains("!test"))
                 {
                     irc.sendChatMessage("Testing requested.");
+                    ///TODO find out how to add who triggered the event
+                    //Console.WriteLine("!test used by " + )
                 }
             }
         }
