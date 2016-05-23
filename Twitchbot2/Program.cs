@@ -14,27 +14,27 @@ namespace Twitchbot2
         /// <param name="args"></param>
         //internal void Run()
         //{
-            //TwitchChatConnection chatConnection = new TwitchChatConnection(IrcBot, false),
-               // whisperConnection = new TwitchChatConnection(bot, true);
+        //TwitchChatConnection chatConnection = new TwitchChatConnection(IrcBot, false),
+        // whisperConnection = new TwitchChatConnection(bot, true);
 
-            //LinkedList<TwitchChannel> channels = new LinkedList<TwitchChannel>();
-            //channels.AddLast(new TwitchChannel(userBot));
-            ////As many channels as we want
+        //LinkedList<TwitchChannel> channels = new LinkedList<TwitchChannel>();
+        //channels.AddLast(new TwitchChannel(userBot));
+        ////As many channels as we want
 
-            //foreach (TwitchChannel channel in channels)
-            //{
-                //new TwitchChatRoom(chatConnection, whisperConnection, channel);
-            //}
+        //foreach (TwitchChannel channel in channels)
+        //{
+        //new TwitchChatRoom(chatConnection, whisperConnection, channel);
+        //}
 
-            //newThread(new ThreadStart(chatConnection.Run)).Start();
-            //whisperConnection.Run();
+        //newThread(new ThreadStart(chatConnection.Run)).Start();
+        //whisperConnection.Run();
         //}
 
         static void Main(string[] args)
         {
             IrcBot irc = new IrcBot("irc.twitch.tv", 6667,
-                "bauwsbot", "oauth:yk1erggcp1egwf527jrwouu7molbp1");
-            irc.joinRoom("bauwsbot");
+                "bauwsdebug", "oauth:20m91p9usq6l1yoi528dtrqfygxmhd");
+            irc.joinRoom("bauwsdebug");
             while (true)
             {
                 string message = irc.readMessage();
