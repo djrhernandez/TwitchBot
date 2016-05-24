@@ -28,9 +28,10 @@ namespace Twitchbot2
             _bio = bio;
         }
 
-        //Can add database support here if the feature is wanted in the future
+        //
+        //Can add database support here if the feature is wanted in the future//
+        //
 
-        ///TODO Figure out this error???
         public TwitchUser(TwitchUser user) : this(user.displayName, user.id, user.createdAt,
             user.updatedAt, user.logo, user.bio)
         {
