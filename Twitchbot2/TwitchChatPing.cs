@@ -8,5 +8,7 @@ namespace Twitchbot2
 {
     public class TwitchChatPing : TwitchChatEvent
     {
+        //this is done iirc
+        //can't remember what I was going to put here that's why
     }
 }

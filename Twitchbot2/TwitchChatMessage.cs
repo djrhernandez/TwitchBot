@@ -21,6 +21,7 @@ namespace Twitchbot2
         public override string ToString()
         {
             return "[" + channel + "]" + _speaker + ": " + message;
+            //fix this
         }
     }
 }

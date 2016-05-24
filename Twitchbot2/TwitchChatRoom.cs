@@ -10,6 +10,9 @@ namespace Twitchbot2
     {
         private TwitchChatConnection _chatConnection, _whisperConnection;
         private TwitchChannel _channel;
+        //need to make a TwitchChannel class
+        //use it to store the channel names????
+        //idk will have to think about how to tackle this at a later date
 
         public TwitchChatRoom(TwitchChatConnection chatConnection,
             TwitchChatConnection whisperConnection, TwitchChannel channel)
@@ -24,6 +27,8 @@ namespace Twitchbot2
         #region Methods
         public void SendChatMessage(string message)
         {
+            //fix the .ircClient errors
+            //???
             _chatConnection.ircClient.WriteLine(":" + _chatConnection.bot.user.username +
                 "!" + _chatConnection.bot.user.username + "@" + _chatConnection.bot.user.username
                 + ".tmi.twitch.tv PRIVMSG #" + _channel.username + " :" + message);
@@ -35,6 +40,7 @@ namespace Twitchbot2
             {
                 TwitchChatMessage chatMessage = (TwitchChatMessage)channelEvent;
                 if(chatMessage.message.StartsWith("!"))
+                    //fix the .message errors???
                 {
                     _whisperConnection.SendWhisper(chatMessage.speaker,
                         "Shh, I'm a whispering bot. Try typing this instead: /w "

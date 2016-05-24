@@ -27,6 +27,7 @@ namespace Twitchbot2
 
             if(whisperServer)
             {
+                //fix this
                 ircClient.WriteLine("CAP REQ :twitch.tv/commands");
             }
         }
@@ -62,14 +63,18 @@ namespace Twitchbot2
 
         private void RespondToEvent(TwitchChatEvent charEvent)
         {
+            //need the Log library???
+            //import that
             Log.Message(chatEvent.ToString());
 
+            //fix chatEvent
             if(chatEvent.GetType().Equals(typeof(TwitchChatWhisper)))
             {
                 TwitchChatWhisper whisper = (TwitchChatWhisper)chatEvent;
                 //echo the response? useful for later?
                 //SendWhisper(whisper.speaker, "You said: " + whisper.message);
                 SendWhisper(whisper.speaker, 
+                    //fix speaker?
                     "This is a bot account, please do not whisper it");
             }
             else if(chatEvent.GetType().IsSubclassOf(typeof(TwitchChatChannelEvent)))
@@ -86,6 +91,7 @@ namespace Twitchbot2
             }
             else if(chatEvent.GetType().Equals(typeof(TwitchChatPing)))
             {
+                //fix this
                 ircClient.WriteLine("PONG");
             }
         }

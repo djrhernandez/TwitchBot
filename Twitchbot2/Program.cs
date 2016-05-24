@@ -17,6 +17,7 @@ namespace Twitchbot2
             
         internal void Run()
         {
+            //???
         TwitchChatConnection chatConnection = new TwitchChatConnection(IrcBot, false), 
                 whisperConnection = new TwitchChatConnection(bot, true);
 
@@ -29,7 +30,7 @@ namespace Twitchbot2
             new TwitchChatRoom(chatConnection, whisperConnection, channel);
         }
 
-        newThread(new ThreadStart(chatConnection.Run)).Start();
+        new Thread(new ThreadStart(chatConnection.Run)).Start();
         whisperConnection.Run();
         }
         #endregion

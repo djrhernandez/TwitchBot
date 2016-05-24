@@ -22,7 +22,9 @@ namespace Twitchbot2
         }
 
         #region Getters
-
+        //use this if needed
+        //can't remember the original purpose for this
+        //i'm stupid
         #endregion
     }
 }

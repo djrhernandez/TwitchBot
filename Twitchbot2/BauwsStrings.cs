@@ -13,7 +13,6 @@ namespace Twitchbot2
         //idk i'm too fucking tired to think about it
         //work on in the future
         //consult David/Kyle/Wyatt/James???
-
         public static string TextBetween(string source, string searchToken1, string searchToken2, 
             bool firstOrLastInstance1 = true, bool firstOrLastInstance2 = true)
         {

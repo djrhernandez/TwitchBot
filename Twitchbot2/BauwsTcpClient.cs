@@ -30,6 +30,9 @@ namespace Twitchbot2
         {
             //Can I use .TotalMilliseconds???
             //Look into for the future
+            //Feel like .Milliseconds will cause an error when reading time
+            //although this is just off hypothesis not from debug testing
+            //run to ensure
             int timeSpan = (DateTime.Now - timeOfLastSend).Milliseconds;
             if(timeSpan < _minimumMsBetweenSends)
             {
