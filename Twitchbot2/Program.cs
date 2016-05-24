@@ -37,7 +37,10 @@ namespace Twitchbot2
         {
             IrcBot irc = new IrcBot("irc.twitch.tv", 6667,
                 "bauwsdebug", "oauth:20m91p9usq6l1yoi528dtrqfygxmhd");
+            Console.WriteLine("Connected to Twitch servers");
+            Console.WriteLine("Logging into account");
             irc.joinRoom("bauwsdebug");
+            Console.WriteLine("Joining channel: " + "BauwsDebug");
             while (true)
             {
                 string message = irc.readMessage();
