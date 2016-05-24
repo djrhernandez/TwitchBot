@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace Twitchbot2
 {
-    class Program
+    public class Program
     {
+        #region Whisper
         /// <summary>
         /// Code I found on whispers, look into it and see how it works and work on adding it
         /// </summary>
         /// <param name="args"></param>
+        //private static TwitchUser userBot = new TwitchUser("bauwsdebug");
+
+        //private static TwitchBot2 bot = new TwitchBot2(userBot,
+            //"oauth:20m91p9usq6l1yoi528dtrqfygxmhd");
+            
         //internal void Run()
         //{
         //TwitchChatConnection chatConnection = new TwitchChatConnection(IrcBot, false),
@@ -29,6 +35,7 @@ namespace Twitchbot2
         //newThread(new ThreadStart(chatConnection.Run)).Start();
         //whisperConnection.Run();
         //}
+        #endregion
 
         static void Main(string[] args)
         {

@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Twitchbot2
 {
-    class IrcBot
+    public class IrcBot
     {
         private string userName;
         private string channel;
