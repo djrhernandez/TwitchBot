@@ -6,4 +6,5 @@ The bot was a project started by @Liekabauws or RivenSenpai originally written i
 Suggestions welcome :D
 
 Project began: 5/22/2016 (roughly)
+
 Project completion date:
