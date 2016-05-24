@@ -43,9 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BauwsStrings.cs" />
+    <Compile Include="BauwsTcpClient.cs" />
     <Compile Include="IrcBot.cs" />
+    <Compile Include="IrcClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwitchBot.cs" />
+    <Compile Include="TwitchChatChannelEvent.cs" />
+    <Compile Include="TwitchChatConnection.cs" />
+    <Compile Include="TwitchChatEvent.cs" />
+    <Compile Include="TwitchChatMessage.cs" />
+    <Compile Include="TwitchChatPing.cs" />
+    <Compile Include="TwitchChatRoom.cs" />
+    <Compile Include="TwitchChatWhisper.cs" />
     <Compile Include="TwitchUser.cs" />
   </ItemGroup>
   <ItemGroup>

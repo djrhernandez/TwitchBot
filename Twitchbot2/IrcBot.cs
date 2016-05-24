@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Twitchbot2
 {
-    public class IrcBot
+    public class IrcBot : BauwsTcpClient
     {
         private string userName;
         private string channel;
@@ -20,6 +20,7 @@ namespace Twitchbot2
         private StreamWriter outputStream;
 
         public IrcBot(string ip, int port, string userName, string password)
+            : base(ip, port, 2000)
         {
             this.userName = userName;
 
