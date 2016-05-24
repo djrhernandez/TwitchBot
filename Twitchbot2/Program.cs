@@ -37,13 +37,19 @@ namespace Twitchbot2
         {
             IrcBot irc = new IrcBot("irc.twitch.tv", 6667,
                 "bauwsdebug", "oauth:20m91p9usq6l1yoi528dtrqfygxmhd");
-            Console.WriteLine("Connected to Twitch servers");
-            Console.WriteLine("Logging into account");
+
+            #region ConnectionStatusText
+            Console.WriteLine("Connected to Twitch servers...");
+            Console.WriteLine("Logging into account...");
+            #endregion
+
             irc.joinRoom("bauwsdebug");
-            Console.WriteLine("Joining channel: " + "BauwsDebug");
+            Console.WriteLine("Joining channel: " + "BauwsDebug...");
             while (true)
             {
                 string message = irc.readMessage();
+                #region Commands
+                #region Command: !test
                 if (message.Contains("!test"))
                 {
                     irc.sendChatMessage("Testing requested.");
@@ -51,7 +57,8 @@ namespace Twitchbot2
                     ///TODO find out how to add who triggered the event and then add it to the end
                     ///Console.WriteLine("!test used by " + userName);
                 }
-
+                #endregion
+                #endregion
             }
         }
     }
