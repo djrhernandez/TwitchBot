@@ -14,6 +14,7 @@ namespace Twitchbot2
         {
             _speaker = username;
             _message = message;
+            ///defines speakers and message
         }
 
         public override string ToString()

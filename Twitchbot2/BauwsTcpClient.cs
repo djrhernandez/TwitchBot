@@ -42,11 +42,13 @@ namespace Twitchbot2
 
             outputStream.WriteLine(message);
             outputStream.Flush();
+            ///cooldown to prevent ban
         }
 
         public string ReadNextLine_BLOCKING()
         {
             return inputStream.ReadLine();
+            ///read next line
         }
     }
 }

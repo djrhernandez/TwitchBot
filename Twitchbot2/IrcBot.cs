@@ -39,24 +39,30 @@ namespace Twitchbot2
             this.channel = channel;
             outputStream.WriteLine("Join #" + channel);
             outputStream.Flush();
+            ///joins the channel
         }
 
         public void sendIrcMessage(string message)
         {
             outputStream.WriteLine(message);
             outputStream.Flush();
+            ///writes the message
         }
 
         public void sendChatMessage(string message)
         {
             sendIrcMessage(":" + userName + "!" + userName + "@" + userName +
                 "tmi.twitch.tv PRIVMSG #" + channel + " :" + message);
+            ///connection information so it can connect to the servers
+            ///not my code, grabbed it from the interwebs
+            ///Kappa
         }
 
         public string readMessage()
         {
             string message = inputStream.ReadLine();
             return message;
+            ///method to read the chat
         }
     }
 }

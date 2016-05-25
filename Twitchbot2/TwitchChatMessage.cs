@@ -16,12 +16,15 @@ namespace Twitchbot2
         {
             _speaker = speaker;
             _message = message.Trim();
+            ///defines the speakers
+            ///defines _message and trims it
         }
 
         public override string ToString()
         {
             return "[" + channel + "]" + _speaker + ": " + message;
-            //fix this
+            //fix message
+            ///returns the above values
         }
     }
 }

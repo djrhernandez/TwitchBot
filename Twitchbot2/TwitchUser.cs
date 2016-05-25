@@ -26,6 +26,7 @@ namespace Twitchbot2
             _updatedAt = updatedAt == null ? DateTime.MinValue : updatedAt.Value;
             _logo = logo;
             _bio = bio;
+            ///code simplification for all the data for the Twitch account
         }
 
         //
@@ -34,6 +35,7 @@ namespace Twitchbot2
 
         public TwitchUser(TwitchUser user) : this(user.displayName, user.id, user.createdAt,
             user.updatedAt, user.logo, user.bio)
+            ///grabs and notes all the data for the user for reference
         {
         }
         #endregion

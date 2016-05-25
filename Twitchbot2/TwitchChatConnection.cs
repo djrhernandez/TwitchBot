@@ -14,13 +14,16 @@ namespace Twitchbot2
         private LinkedList<TwitchChatRoom>
             chatRooms = new LinkedList<TwitchChatRoom>();
 
+        ///connection information
         public TwitchChatConnection(TwitchBot bot, bool whisperServer)
         {
             this._bot = bot;
             string ircServer = "irc.twitch.tv";
+            ///public ip of the server
             if(whisperServer)
             {
                 ircServer = "199.9.253.119";
+                ///actual ip of the server
             }
 
             this._ircBot = new IrcBot(ircServer, 6667, bot.user.username, bot.oauthPassword);
@@ -29,6 +32,7 @@ namespace Twitchbot2
             {
                 //fix this
                 ircClient.WriteLine("CAP REQ :twitch.tv/commands");
+                ///send this to the server to ensure that you can receive whispers on the IRC
             }
         }
 
@@ -37,6 +41,7 @@ namespace Twitchbot2
         {
             ircClient.WriteLine("JOIN #" + room.channel.username);
             chatRooms.AddLast(room);
+            ///adds the last room joined to the chatRooms list
         }
 
         internal void Run()
@@ -45,12 +50,15 @@ namespace Twitchbot2
             {
                 TwitchChatEvent chatEvent = GetNextChatEvent();
                 RespondToEvent(chatEvent);
+                ///grab the next event (chat message?)
+                ///respond to the event
             }
         }
 
         internal void SendWhisper(string speakee, string message)
         {
             ircClient.WriteLine("PRIVMSG #jtv :/w " + speakee + " " + message);
+            ///code on how it responds in chat to active whispers
         }
         #endregion
 

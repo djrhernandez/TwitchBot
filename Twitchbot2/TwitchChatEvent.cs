@@ -20,6 +20,7 @@ namespace Twitchbot2
             else
             {
                 command = BauwsStrings.TextBetween(chatEventCommand, " ", " ");
+                ///looks between the two spaces, see BauwsStrings.cs for the method
             }
 
             if (command.Equals("PRIVMSG"))
@@ -33,6 +34,7 @@ namespace Twitchbot2
             }
             else if (command.Equals("WHISPER"))
             {
+                ///event happening on a whisper
                 string username = ParseUsername(chatEventCommand);
                 string message = BauwsStrings.TextAfter(chatEventCommand, " :");
 
@@ -43,6 +45,7 @@ namespace Twitchbot2
             else if (command.Equals("PING"))
             {
                 return new TwitchChatPing();
+                ///pings the server
             }
             else
             {
@@ -61,6 +64,7 @@ namespace Twitchbot2
         private static string ParseChannel(string chatEventCommand)
         {
             return BauwsStrings.TextBetween(chatEventCommand, " #", " ");
+            ///checks the chat between [:!] and [# ]
         }
         #endregion
     }

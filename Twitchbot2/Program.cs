@@ -21,6 +21,7 @@ namespace Twitchbot2
         TwitchChatConnection chatConnection = new TwitchChatConnection(IrcBot, false), 
                 whisperConnection = new TwitchChatConnection(bot, true);
 
+            ///add the linkedlist
         LinkedList<TwitchChannel> channels = new LinkedList<TwitchChannel>();
         channels.AddLast(new TwitchChannel(userBot));
         ////As many channels as we want
@@ -51,7 +52,9 @@ namespace Twitchbot2
             {
                 string message = irc.readMessage();
                 #region Commands
+                ///this is where commands go
                 #region Command: !test
+                ///see this command as an example of how this works
                 if (message.Contains("!test"))
                 {
                     irc.sendChatMessage("Testing requested.");
