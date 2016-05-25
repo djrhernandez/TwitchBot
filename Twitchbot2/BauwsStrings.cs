@@ -42,7 +42,6 @@ namespace Twitchbot2
                     return source.Substring(iStart, iEnd - iStart);
                 }
             }
-
             return null;
         }
 
